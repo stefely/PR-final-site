@@ -16,121 +16,172 @@
           <a href="tour.html">TOUR</a>
         </nav>
   <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <ul class="merch-controls">
-            <li data-filter="all">
-              <button class="merch-ctrl-btn active all-icon">All items</button>
-            </li>
-            <li data-filter="topwear">
-              <button class="merch-ctrl-btn">
-                <span>Topwear</span>
-                <img src="./assets/images/merch/icons/topwear-icon.svg" />
-              </button>
-            </li>
-            <li data-filter="bottomwear">
-              <button class="merch-ctrl-btn bottomwear-icon">
-                <span>Bottomwear</span>
-                <img src="./assets/images/merch/icons/bottomwear-icon.svg" />
-              </button>
-            </li>
-            <li data-filter="headwear">
-              <button class="merch-ctrl-btn headwear-icon">
-                <span>Headwear</span>
-                <img src="./assets/images/merch/icons/headwear-icon.svg" />
-              </button>
-            </li>
-            <li data-filter="footwear">
-              <button class="merch-ctrl-btn footwear-icon">
-                <span>Footwear</span>
-                <img src="./assets/images/merch/icons/footwear-icon.svg" />
-              </button>
-            </li>
-            <li data-filter="accessories">
-              <button class="merch-ctrl-btn accessories-icon">
-                <span>Accessories</span>
-                <img src="./assets/images/merch/icons/accessories-icon.svg" />
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <style>* {box-sizing: border-box;}body { background-color: black;padding: 0px;}.main {max-width: 1000px;margin: auto;}h1 {font-size: 50px;word-break: break-all;}
+    .row {margin: 8px -16px;}
+    .row,
+    .row > .column {padding: 8px;}
+    .column {float: left;width: 25%;display: none; }.row:after {content: "";display: table;clear: both;}
+    .content {background-color: white;padding: 10px;}
+    .show {display: block;}
+    .btn {border: none;outline: none;padding: 12px 16px;background-color: white;cursor: pointer;}.btn:hover {background-color: #ddd;}.btn.active {background-color: #666;color: white;}
+</style>
 
-      <div class="filtr-container row">
-        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
-          <img
-            src="./assets/images/merch/topwear/white-pony-red-shirt.png"
-            alt="Red T-Shirt with white horse logo"
-          />
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="headwear" data-sort="value">
-          <img
-            src="./assets/images/merch/headwear/deftones-beanie.png"
-            alt="Black Deftones beanie with pom"
-          />
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="footwear" data-sort="value">
-          <img
-            src="./assets/images/merch/footwear/deftones-flip-flops.png"
-            alt="Red Deftones flip flops"
-          />
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="bottomwear" data-sort="value">
-          <img
-            src="./assets/images/merch/bottomwear/deftones-shorts.png"
-            alt="Black womens shorts with white pony logo"
-          />
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="accessories" data-sort="value">
-          <img
-            src="./assets/images/merch/accessories/tote-bag.png"
-            alt="Black tote bag with Deftones logos"
-          />
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
-          <img
-            src="./assets/images/merch/topwear/los-deftones-shirt.png"
-            alt="Long sleeve black Deftones shirt"
-          />
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="headwear" data-sort="value">
-          <img
-            src="./assets/images/merch/headwear/white-pony-hat.png"
-            alt="Black Deftones hat with white White Pony logo"
-          />
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="accessories" data-sort="value">
-          <img
-            src="./assets/images/merch/accessories/military-bag.png"
-            alt="Green duffle back with Deftones stencil"
-          />
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
-          <img
-            src="./assets/images/merch/topwear/deftones-skull-shirt.png"
-            alt="White Deftones shirt with black skull and band name"
-          />
-        </div>
-      </div>
+<div id="myBtnContainer" style="padding:10px">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('clothing')"> Clothing</button>
+  <button class="btn" onclick="filterSelection('accessories')"> Accessories</button>
+  <button class="btn" onclick="filterSelection('porter')"> Porter Robinson</button>
+  <button class="btn" onclick="filterSelection('virtual')"> Virtual Self</button>
+</div>
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column clothing porter">
+    <div class="content">
+      <img src="./assets/images/merch/tee-1.png" alt="Fellow Feeling Tee" style="width:100%">
+      <h4>Fellow Feeling Tee</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
     </div>
-  </main>
+  </div>
+  <div class="column clothing porter">
+    <div class="content">
+      <img src="./assets/images/merch/tee-2.png" alt="Sad Machine Tee" style="width:100%">
+      <h4>Sad Machine Tee</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column clothing porter">
+    <div class="content">
+      <img src="./assets/images/merch/tee-3.png" alt="Shelter Tee" style="width:100%">
+      <h4>Shelter Tee</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column clothing porter">
+    <div class="content">
+      <img src="./assets/images/merch/tee-4.png" alt="Language Tee" style="width:100%">
+      <h4>Language Tee</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column clothing porter">
+    <div class="content">
+      <img src="./assets/images/merch/tee-5.png" alt="Fresh Static Snow Tee" style="width:100%">
+      <h4>Fresh Static Snow Tee</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column clothing porter">
+    <div class="content">
+      <img src="./assets/images/merch/tee-6.png" alt="Easy Tee" style="width:100%">
+      <h4>Easy Tee</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column accessories clothing porter">
+    <div class="content">
+      <img src="./assets/images/merch/hat-1.png" alt="Shelter Cap" style="width:100%">
+      <h4>Shelter Cap</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column accessories porter">
+    <div class="content">
+      <img src="./assets/images/merch/sticker-1.png" alt="Shelter Sticker Set" style="width:100%">
+      <h4>Shelter Sticker Set</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column accessories porter">
+    <div class="content">
+      <img src="./assets/images/merch/poster-1.jpg" alt="Shelter Movie Poster" style="width:100%">
+      <h4>Shelter Movie Poster</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column clothing virtual">
+    <div class="content">
+      <img src="./assets/images/merch/tee-7.png" alt="Arcane Circle Tee" style="width:100%">
+      <h4>Arcane Circle Tee</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column clothing virtual">
+    <div class="content">
+      <img src="./assets/images/merch/sweat-1.png" alt="Eternalism Sweatshirt" style="width:100%">
+      <h4>Eternalism Sweatshirt</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column clothing virtual">
+    <div class="content">
+      <img src="./assets/images/merch/sweat-2.png" alt="Egoform Sweatshirt" style="width:100%">
+      <h4>Egoform Sweatshirt</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+  <div class="column accessories virtual">
+    <div class="content">
+      <img src="./assets/images/merch/poster-2.png" alt="Virtual Self Poster" style="width:100%">
+      <h4>Virtual Self Poster</h4>
+      <p style="text-align:center;color:white;background-color:darkred">SOLD OUT!</p>
+    </div>
+  </div>
+
+<!-- END GRID -->
+</div>
+</main>
 </body>
 <script src="./assets/javascripts/jquery-3.3.1.min.js"></script>
 <script src="./assets/javascripts/jquery.filterizr.min.js"></script>
 <script src="./assets/javascripts/lodash.js"></script>
 <script>
-  $(document).ready(function() {
-    $('.filtr-container').filterizr({});
-    $('.merch-ctrl-btn').click(function(){
-      if($(this).hasClass('active')){
-        return false;
-      } else {
-        $('.merch-ctrl-btn').removeClass('active');
-        $(this).addClass('active');
+  filterSelection("all") // Execute the function and show all columns
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  // Show filtered elements
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
       }
-    })
-  });
+    }
+  }
+
+  // Hide elements that are not selected
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
 </script>
 
 </html>

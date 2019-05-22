@@ -73,7 +73,7 @@ nav > a.active{
 section{
   width: 100%;
   height: auto;
-  margin: 100px auto;
+  margin: 50px auto 0px auto;
 }
 
 .section-title{
